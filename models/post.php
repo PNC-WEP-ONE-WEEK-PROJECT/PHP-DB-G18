@@ -30,3 +30,10 @@ function createItems($desciption, $dateTime,$postImage,$user_id)
     ]);
     return $statment->rowCount() >0 ;
 }
+function deleteItem($id)
+{
+   global $database;
+
+   $database->query("DELETE FROM posts WHERE post_id = $id");
+//    $statment->execute([':id' => $id]);
+}

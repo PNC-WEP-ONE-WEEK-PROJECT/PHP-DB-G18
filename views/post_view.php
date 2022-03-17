@@ -17,7 +17,7 @@
 
                         <div class="d-flex justify-content-end">
                             <a href="" class="btn btn-primary mr-1"><i class="fa fa-pencil">edit</i></a>
-                            <a href="" class="btn btn-danger mr-1"><i class="fa fa-trash">delete</i></a>
+                            <a href="../controllers/delete_post.php?id=<?= $view['post_id'] ?>" class="btn btn-danger mr-1"><i class="fa fa-trash">delete</i></a>
                         </div>
                     </div>
                 </div>
