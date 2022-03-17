@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-end">
                             <a href="" class="btn btn-primary mr-1"><i class="fa fa-pencil">edit</i></a>
-                            <a href="" class="btn btn-danger mr-1"><i class="fa fa-trash">delete</i></a>
+                            <a href="../controllers/delete_post.php?id=<?= $view['post_id'] ?>" class="btn btn-danger mr-1"><i class="fa fa-trash">delete</i></a>
                         </div>
                         <h2 class="display-7 text-capitalize"><?= $view['caption'] ?></h2>
                         <h6 class="display-9 text-primary"><?= $view['dateOfTime'] ?></h6>
