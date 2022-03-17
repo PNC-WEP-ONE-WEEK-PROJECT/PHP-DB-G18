@@ -1,5 +1,5 @@
 <!-- contanter for posts -->
-<div class="container p-2 ">
+<div class="container p-2 w-50 ">
 <?php
     require_once "models/post.php";
     $views = getItems();
@@ -11,14 +11,13 @@
             <div class="col-12">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <h2 class="display-5 text-capitalize"><?= $view['caption'] ?></h2>
-                        <h6 class="display-6 text-primary"><?= $view['dateOfTime'] ?></h6>
-                        <h6 class="display-6 text-capitalize"><?= $view['image'] ?></h6>
-
                         <div class="d-flex justify-content-end">
                             <a href="" class="btn btn-primary mr-1"><i class="fa fa-pencil">edit</i></a>
                             <a href="" class="btn btn-danger mr-1"><i class="fa fa-trash">delete</i></a>
                         </div>
+                        <h2 class="display-7 text-capitalize"><?= $view['caption'] ?></h2>
+                        <h6 class="display-9 text-primary"><?= $view['dateOfTime'] ?></h6>
+                        <img src="images/<?= $view['image'] ?>" alt="" width="620px">
                     </div>
                 </div>
             </div>

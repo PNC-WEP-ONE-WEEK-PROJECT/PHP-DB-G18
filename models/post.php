@@ -1,5 +1,6 @@
 <?php
 // database connection
+// require_once("database.php");
 $database = new PDO('mysql:host=localhost;dbname=facebook_vc3','root','');
 
 function getItems()
