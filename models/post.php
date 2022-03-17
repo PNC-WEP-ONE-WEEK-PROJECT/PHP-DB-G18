@@ -5,11 +5,10 @@ $database = new PDO('mysql:host=localhost;dbname=facebook_vc3','root','');
 function getItems()
 {
     global $database;
-    $statment = $database->prepare("SELECT *FROM posts ORDER BY id DESC");
+    $statment = $database->prepare("SELECT *FROM posts ORDER BY post_id DESC");
     $statment->execute();
     return $statment->fetchAll();
 }
-
 function getItemById($id)
 {
     global $database;
@@ -19,7 +18,6 @@ function getItemById($id)
     ]);
     return $statment->fetch();
 }
-
 function createItems($desciption, $dateTime,$postImage,$user_id)
 {
     global $database;
