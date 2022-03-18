@@ -13,7 +13,7 @@ function getItems()
 function getItemById($id)
 {
     global $database;
-    $statment = $database->prepare("SELECT *FROM posts where id = :id");
+    $statment = $database->prepare("SELECT * FROM posts where post_id = :id");
     $statment->execute([
         ':id' => $id,
     ]);
@@ -22,7 +22,7 @@ function getItemById($id)
 function createItems($desciption, $dateTime,$postImage,$user_id)
 {
     global $database;
-    $statment =$database->prepare("INSERT INTO posts(caption,image,dateOfTime,user_id) VALUE(:desciption,:postImage,:dateTime,:user_id)");
+    $statment =$database->prepare("INSERT INTO posts (caption,image,dateOfTime,user_id) VALUE(:desciption,:postImage,:dateTime,:user_id)");
     $statment->execute([
         ':desciption'=>$desciption,
         ':dateTime'=>$dateTime,
@@ -31,10 +31,21 @@ function createItems($desciption, $dateTime,$postImage,$user_id)
     ]);
     return $statment->rowCount() >0 ;
 }
+// Function for delete all that posts
 function deleteItem($id)
 {
    global $database;
 
    $database->query("DELETE FROM posts WHERE post_id = $id");
-//    $statment->execute([':id' => $id]);
+}
+// Function for update or edit all that posts
+function updateItem($id, $image, $caption)
+{   
+    global $database;
+    $statment = $database->prepare("UPDATE posts SET  image = :image, caption = :caption where post_id = :id");
+    $statment->execute([
+        ':id'=> $id,
+        ':image'=>$image,
+        ':caption'=>$caption,
+    ]);
 }
