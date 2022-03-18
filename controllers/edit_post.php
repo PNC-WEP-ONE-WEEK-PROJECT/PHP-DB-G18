@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $caption = $_POST['desciption'];
     $image = $_POST['oldfile'];
     if (!empty($_FILES['postImage']['name'])){
-        $image = $_FILES['postImage']['name'];
+       $image = $_FILES['postImage']['name'];
     }
     if(!empty($image) and !empty($caption))
     {
