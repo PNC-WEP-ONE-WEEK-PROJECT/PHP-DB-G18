@@ -9,11 +9,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     if (!empty($_FILES['postImage']['name'])){
        $image = $_FILES['postImage']['name'];
     }
-    if(!empty($image) and !empty($caption))
-    {
-        updateItem($id, $image, $caption);
+
+    updateItem($id, $image, $caption);
         
-    }
+
 }
 header('Location: ../index.php');
 ?>

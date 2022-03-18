@@ -35,14 +35,14 @@ function createItems($desciption, $dateTime,$postImage,$user_id)
 function deleteItem($id)
 {
    global $database;
-
    $database->query("DELETE FROM posts WHERE post_id = $id");
 }
 // Function for update or edit all that posts
 function updateItem($id, $image, $caption)
 {   
+    // echo $image, die;
     global $database;
-    $statment = $database->prepare("UPDATE posts SET  image = :image, caption = :caption where post_id = :id");
+    $statment = $database->prepare("UPDATE posts SET image = :image, caption = :caption where post_id = :id");
     $statment->execute([
         ':id'=> $id,
         ':image'=>$image,

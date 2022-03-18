@@ -5,7 +5,7 @@
     isset($_GET['id']) ? $id = $_GET['id'] : $id = null;
     $post = getItemById($id);
     ?>
-    <form action="../controllers/edit_post.php" method="post">
+    <form action="../controllers/edit_post.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="post_id" value="<?=$post['post_id']?>" >    
         <div class="form-group">
             <input type="text" class="form-control" placeholder="description" name="desciption" value="<?php echo $post['caption']?>">
