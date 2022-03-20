@@ -1,14 +1,17 @@
-
+<?php 
+require_once('../templates/header.php');
+require_once('../templates/footer.php');
+?>
 <div class="container p-2 w-50">
     <form action="../controllers/create_post.php" method="post"  enctype="multipart/form-data" >
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block form-control">post</button>
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="description" name="desciption" value="">
+            <input type="text" class="form-control" placeholder="description" name="desciption">
         </div>
         <div class="form-group">
-            <input type="date" class="form-control" id="datemin" placeholder="Bith day" name="dateTime" min="2000-01-02" value="datetime">
+            <input type="date" class="form-control" id="datemin" placeholder="Bith day" name="dateTime" min="2000-01-02" value="dateTime">
         </div>
         <div>
         <input type="file" class="form-control" placeholder="" name="postImage" >
