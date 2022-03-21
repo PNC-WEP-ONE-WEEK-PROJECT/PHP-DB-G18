@@ -31,27 +31,24 @@
                                     <div>
                                         <h2 class="display-7 text-capitalize"><?= $view['caption'] ?></h2>
                                         <h6 class="display-9 text-primary"><?= $view['dateOfTime'] ?></h6>
-                                        <img src="images/<?= $view['image'] ?>" alt="" width="600px">
+                                        <img src="images/<?= $view['image'] ?>" alt="" width="620px">
                                        <label for="<?= $view['id'] ?>">comment</label>
                                         
                                         <?php 
                                             $post_id= $view['id'];
-                                            echo $post_id;
+                                            // echo $post_id;
                                             $allCmts = getCommentId($post_id);
                                             foreach($allCmts as $allCmt):
             
                                         ?>
-
-                                       
-                                        <p ><?= $allCmt['description'] ?> </p>
-                                        <!-- <input type="hidden" value="<?php $allCmt['time_comment']?>">              -->
+                                        <p ><?= $allCmt['description'] ?> </p>     
                                         <?php
                                             endforeach;
                                         ?>
 
                                     </div>
                                     <form action="../controllers/create_cmt.php" method="post"  enctype="multipart/form-data">
-                                        <input type="text" name="comment" id="<?= $view['id'] ?>" placeholder="white a comment...">
+                                        <input type="text" name="comment" id="<?= $view['id'] ?>" placeholder="write a comment...">
                                         <input type="hidden" id="post_id" name="id" value="<?= $view['id']?>">
                                         <input type="hidden" id="userID" name="user_id" value="1">
                                         <input type="hidden" class="form-control" id="datemin" placeholder="Bith day" name="time" min="2000-01-02" value="<?php echo date("y-m-d")?>">
