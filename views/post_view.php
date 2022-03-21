@@ -53,6 +53,7 @@
                                         <input type="hidden" id="userID" name="user_id" value="1">
                                         <input type="hidden" class="form-control" id="datemin" placeholder="Bith day" name="time" min="2000-01-02" value="<?php echo date("y-m-d")?>">
                                         <button  type="submit">send</button>
+                                        <!-- <i class="material-icons" style="font-size:36px">send</i> -->
                                     </form>
                             </div>
                         </div>
