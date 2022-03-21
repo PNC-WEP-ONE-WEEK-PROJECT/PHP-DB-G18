@@ -1,0 +1,9 @@
+body{
+    background-color:#222f3e;
+}
+.border_3{
+    border-top: 4px solid #48dbfb;
+}
+.img{
+    border-radius: 70px 70px;
+}
