@@ -14,9 +14,7 @@ require_once('../templates/header.php');
         <div class="form-group">
             <input type="text" class="form-control" placeholder="description" name="desciption" value="<?php echo $post['caption']?>">
         </div>
-        <!-- <div class="form-group">
-            <input type="date" class="form-control" id="datemin" placeholder="Bith day" name="dateTime" min="2000-01-02" value="<?= $post['dateOfTime']?>">
-        </div> -->
+       
         <div>
         <input type="file" class="form-control" placeholder="" name="postImage" >
         <input type="hidden" name="oldfile" value="<?= $post['image']?>">

@@ -43,13 +43,13 @@ function createItems($desciption, $dateTime,$postImage,$user_id)
     ]);
     return $statment->rowCount() >0 ;
 }
-// -------------Function for delete all that posts-------------
+// -------------Function for delete all that posts--------------------------
 function deleteItem($id)
 {
    global $database;
    $database->query("DELETE FROM posts WHERE id = $id");
 }
-//------------- Function for update or edit all that posts----------
+//------------- Function for update or edit all that posts------------------- 
 function updateItem($id, $image, $caption)
 {   
     // echo $image, die;
@@ -62,7 +62,6 @@ function updateItem($id, $image, $caption)
     ]);
 }
 
-// ------------------------------------Funtion for create comment----------------------------- 
 
 // ----------------------------------funtion create_cmt---------------------------------------
 function getAllComment()
@@ -83,7 +82,7 @@ function createComments($description,$time_release,	$post_id,$user_id)
         ':post_id'=>$post_id,
         ':id'=>$user_id,
     ]);
-    return $statment->rowCount() >0 ;
+    return $statment->rowCount() >0;
 }
 
 // ------------------------get id of comment------------------------
